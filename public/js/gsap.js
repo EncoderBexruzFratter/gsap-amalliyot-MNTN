@@ -55,108 +55,226 @@ line__tl.to(".hero__line" , {
     duration:.8
 })
 
-gsap.to(".get__startted__right div" , {
-    x:566,
-    duration:1,
-    stagger:.3,
-    scrollTrigger: {
-        trigger:".get__startted",
-        start:"-900 top",
-        end:"top top",
-        // markers:true,
-        scrub:4,
-        // pin:true
-    }
-})
-gsap.from(".get__startted__right img" , {
-    scale:1.5,
-    duration:1,
-    scrollTrigger: {
-        trigger:".get__startted",
-        start:"150 200",
-        end:"150 200",
-        // markers:true,
-        scrub:4,
-        // pin:true
-    }
-})
 
-let get_start__text_tl = gsap.timeline({
-    scrollTrigger: {
-        trigger:".get__startted",
-        start:"top 200",
-        end:"top 200",
-        // markers:true,
-        scrub:4,
-        // pin:true
+
+
+function getStarted() {
+    if (window.innerWidth < 1024) {
+      // Kichik ekranlar uchun animatsiya
+      gsap.to(".get__startted__right div" , {
+        x:566,
+        duration:3,
+        stagger:.3,
+        scrollTrigger: {
+            trigger:".get__startted",
+            start:"-150 top",
+            end:"150 top",
+            // markers:true,
+            scrub:4,
+            // pin:true
+        }
+    })
+    gsap.from(".get__startted__right img" , {
+        scale:1.5,
+        duration:1,
+        scrollTrigger: {
+            trigger:".get__startted",
+            start:"150 200",
+            end:"150 200",
+            // markers:true,
+            scrub:4,
+            // pin:true
+        }
+    })
+    
+    let get_start__text_tl = gsap.timeline({
+        scrollTrigger: {
+            trigger:".get__startted",
+            start:"top 200",
+            end:"top 200",
+            // markers:true,
+            scrub:4,
+            // pin:true
+        }
+    })
+    
+    get_start__text_tl.from(".get_start__text_1" , {
+        opacity:0,
+        duration:0.8,
+        scale:.8
+       
+    }).from(".get_start_left .get_start__text_2" , {
+        x:-400,
+        opacity:0,
+        duration:.8,
+        stagger:.3
+    })
+    } else {
+      // Katta ekranlar uchun animatsiya
+      gsap.to(".get__startted__right div" , {
+        x:566,
+        duration:1,
+        stagger:.3,
+        scrollTrigger: {
+            trigger:".get__startted",
+            start:"-900 top",
+            end:"top top",
+            // markers:true,
+            scrub:4,
+            // pin:true
+        }
+    })
+    gsap.from(".get__startted__right img" , {
+        scale:1.5,
+        duration:1,
+        scrollTrigger: {
+            trigger:".get__startted",
+            start:"150 200",
+            end:"150 200",
+            // markers:true,
+            scrub:4,
+            // pin:true
+        }
+    })
+    
+    let get_start__text_tl = gsap.timeline({
+        scrollTrigger: {
+            trigger:".get__startted",
+            start:"top 200",
+            end:"top 200",
+            // markers:true,
+            scrub:4,
+            // pin:true
+        }
+    })
+    
+    get_start__text_tl.from(".get_start__text_1" , {
+        opacity:0,
+        duration:0.8,
+        scale:.8
+       
+    }).from(".get_start_left .get_start__text_2" , {
+        x:-400,
+        opacity:0,
+        duration:.8,
+        stagger:.3
+    })
     }
-})
-
-get_start__text_tl.from(".get_start__text_1" , {
-    opacity:0,
-    duration:0.8,
-    scale:.8
-   
-}).from(".get_start_left .get_start__text_2" , {
-    x:-400,
-    opacity:0,
-    duration:.8,
-    stagger:.3
-})
-
+  }
+  
+  getStarted()
 
 // hiking start
 
 
-gsap.to(".hiking__right div" , {
-    x:-566,
-    duration:1,
-    stagger:.3,
-    scrollTrigger: {
-        trigger:".hiking",
-        start:"-900 top",
-        end:"top top",
-        // markers:true,
-        scrub:4,
-        // pin:true
-    }
-})
-gsap.from(".hiking__right img" , {
-    scale:1.5,
-    duration:1,
-    scrollTrigger: {
-        trigger:".hiking",
-        start:"150 200",
-        end:"150 200",
-        // markers:true,
-        scrub:4,
-        // pin:true
-    }
-})
 
-let line__tl_2 = gsap.timeline({
-    scrollTrigger: {
-        trigger:".hiking",
-        start:"top 200",
-        end:"top 200",
-        // markers:true,
-        scrub:4,
-        // pin:true
+
+
+function hiking() {
+    if (window.innerWidth < 1024) {
+      // Kichik ekranlar uchun animatsiya
+      gsap.to(".hiking__right div" , {
+        x:-566,
+        duration:3,
+        stagger:.3,
+        scrollTrigger: {
+            trigger:".hiking",
+            start:"300 top",
+            end:"1000 top",
+            markers:true,
+            scrub:4,
+            // pin:true
+        }
+    })
+    gsap.from(".hiking__right img" , {
+        scale:1.5,
+        duration:1,
+        scrollTrigger: {
+            trigger:".hiking",
+            start:"150 200",
+            end:"150 200",
+            // markers:true,
+            scrub:4,
+            // pin:true
+        }
+    })
+    
+    let line__tl_2 = gsap.timeline({
+        scrollTrigger: {
+            trigger:".hiking",
+            start:"top 200",
+            end:"top 200",
+            // markers:true,
+            scrub:4,
+            // pin:true
+        }
+    })
+    
+    line__tl_2.from(".hiking__text_1" , {
+        opacity:0,
+        duration:0.8,
+        scale:.8
+       
+    }).from(".hiking_start_left .hiking__text_2" , {
+        x:-400,
+        opacity:0,
+        duration:.8,
+        stagger:.3
+    })
+    } else {
+      // Katta ekranlar uchun animatsiya
+      gsap.to(".hiking__right div" , {
+        x:-566,
+        duration:1,
+        stagger:.3,
+        scrollTrigger: {
+            trigger:".hiking",
+            start:"-900 top",
+            end:"top top",
+            // markers:true,
+            scrub:4,
+            // pin:true
+        }
+    })
+    gsap.from(".hiking__right img" , {
+        scale:1.5,
+        duration:1,
+        scrollTrigger: {
+            trigger:".hiking",
+            start:"150 200",
+            end:"150 200",
+            // markers:true,
+            scrub:4,
+            // pin:true
+        }
+    })
+    
+    let line__tl_2 = gsap.timeline({
+        scrollTrigger: {
+            trigger:".hiking",
+            start:"top 200",
+            end:"top 200",
+            // markers:true,
+            scrub:4,
+            // pin:true
+        }
+    })
+    
+    line__tl_2.from(".hiking__text_1" , {
+        opacity:0,
+        duration:0.8,
+        scale:.8
+       
+    }).from(".hiking_start_left .hiking__text_2" , {
+        x:-400,
+        opacity:0,
+        duration:.8,
+        stagger:.3
+    })
     }
-})
-
-line__tl_2.from(".hiking__text_1" , {
-    opacity:0,
-    duration:0.8,
-    scale:.8
-   
-}).from(".hiking_start_left .hiking__text_2" , {
-    x:-400,
-    opacity:0,
-    duration:.8,
-    stagger:.3
-})
-
+  }
+  
+  hiking()
 
 // key start
 
@@ -253,7 +371,6 @@ pagination.forEach((item, index) => {
 window.addEventListener('scroll', function() {
     // Hozirgi skroll pozitsiyasini olish
     let scrollPosition = window.scrollY || document.documentElement.scrollTop;
-    console.log("Scroll pozitsiyasi: ", scrollPosition);
     
     // Barcha elementlarning chegara rangini asl holatga qaytarish
     pagination.forEach((item) => {

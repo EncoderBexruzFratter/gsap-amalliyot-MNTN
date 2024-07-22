@@ -37,7 +37,7 @@
 
 <body class=" font-[gilroy] overflow-x-hidden bg-[#0B1D26]">
     <!-- background start -->
-    <div class="main__bg absolute top-0 left-0 z-[-1] w-full h-[1900px] scale-150" style="
+    <div class="main__bg absolute top-0 left-0 z-[-1] w-full h-[100vh] lg:h-[1900px] scale-150" style="
         background-image: url(./img/main_bg.png);
         background-size: cover;
         background-position: center center;
@@ -46,7 +46,7 @@
 
 
     <!-- header start -->
-    <header id="Start" class="pt-16 pb-[198px]">
+    <header id="Start" class="pt-16 pb-20 md:pb-[198px]">
         <div class="max-w-[1800px] w-full mx-auto px-5 flex items-center justify-between">
             <a href="#" class="max-w-[108px] logo">
                 <svg width="108" height="24" viewBox="0 0 108 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,7 +71,7 @@
                     </defs>
                 </svg>
             </a>
-            <ul class="nav__list flex items-center gap-10">
+            <ul class="nav__list max-md:hidden flex items-center gap-10">
                 <li><a href="#"
                         class="block font-bold text-lg text-white hover:opacity-50 transition-all duration-300">Equipment</a>
                 </li>
@@ -82,7 +82,7 @@
                         class="block font-bold text-lg text-white hover:opacity-50 transition-all duration-300">Blog</a>
                 </li>
             </ul>
-            <button class="acaunt flex items-center gap-2 text-base text-white">
+            <button class= "max-md:hidden acaunt flex-shrink-0 flex items-center gap-2 text-base text-white">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM7.07 18.28C7.5 17.38 10.12 16.5 12 16.5C13.88 16.5 16.51 17.38 16.93 18.28C15.57 19.36 13.86 20 12 20C10.14 20 8.43 19.36 7.07 18.28ZM18.36 16.83C16.93 15.09 13.46 14.5 12 14.5C10.54 14.5 7.07 15.09 5.64 16.83C4.62 15.49 4 13.82 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 13.82 19.38 15.49 18.36 16.83ZM12 6C10.06 6 8.5 7.56 8.5 9.5C8.5 11.44 10.06 13 12 13C13.94 13 15.5 11.44 15.5 9.5C15.5 7.56 13.94 6 12 6ZM12 11C11.17 11 10.5 10.33 10.5 9.5C10.5 8.67 11.17 8 12 8C12.83 8 13.5 8.67 13.5 9.5C13.5 10.33 12.83 11 12 11Z"
@@ -98,15 +98,20 @@
                 </svg>
                 Account
             </button>
+            <button class="hamburger text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                  </svg>
+            </button>
         </div>
     </header>
     <!-- header end -->
 
 
     <!-- hero start -->
-    <section  class="pb-[843px]">
+    <section  class="mb-[200px] lg:pb-[843px]">
         <div class="max-w-[1800px] mx-auto px-5  flex items-center justify-between">
-            <div class="hero_left flex flex-col items-center gap-[48px]">
+            <div class="hidden hero_left md:flex flex-col items-center gap-[48px]">
                 <h2 class="font-bold text-lg text-white rotate-90">Follow us</h2>
                 <div class="flex flex-col gap-6">
                     <a href="#" target="_blank" class="">
@@ -125,13 +130,32 @@
                     </a>
                 </div>
             </div>
-            <div class="max-w-[950px]">
+            <div class="max-w-[400px] lg:max-w-[700px] xl:max-w-[950px]">
                 <div class="flex items-center gap-8 mb-8">
                     <span class="block hero__line  h-0.5 bg-[#FBD784]"></span>
                     <h1 class="font-extrabold hero__heading text-lg text-[#FBD784]">A Hiking guide</h1>
                 </div>
-                <h2 class="chironic font-semibold text-[88px] text-white mb-8">Be prepared for the Mountains and beyond!
+                <h2 class="chironic font-semibold text-4xl lg:text-[54px] xl:text-[88px] text-white mb-8">Be prepared for the Mountains and beyond!
                 </h2>
+                <div class="md:hidden hero_left flex items-center gap-6 mb-5">
+                    <h2 class="font-bold text-lg text-white ">Follow us</h2>
+                    <div class="flex  gap-6">
+                        <a href="#" target="_blank" class="">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.8 2.00002H16.2C19.4032 2.00002 22 4.59677 22 7.80002V16.2C22 19.4033 19.4032 22 16.2 22H7.8C4.59675 22 2 19.4033 2 16.2V7.80002C2 4.59677 4.59675 2.00002 7.8 2.00002ZM7.6 4C5.61177 4 4 5.61178 4 7.6V16.4C4 18.3882 5.61177 20 7.6 20H16.4C18.3882 20 20 18.3882 20 16.4V7.6C20 5.61178 18.3882 4 16.4 4H7.6ZM17.25 5.5C17.9404 5.5 18.5 6.05965 18.5 6.75C18.5 7.44036 17.9404 8 17.25 8C16.5596 8 16 7.44036 16 6.75C16 6.05965 16.5596 5.5 17.25 5.5ZM12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17C9.23857 17 7 14.7614 7 12C7 9.23858 9.23857 7 12 7ZM12 9C10.3431 9 9 10.3432 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3432 13.6569 9 12 9Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" class="">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22.4592 6.01238C21.6896 6.35373 20.8624 6.58442 19.9944 6.68815C20.8803 6.15701 21.5609 5.31598 21.8813 4.31378C21.052 4.80564 20.1336 5.16278 19.156 5.3552C18.3732 4.52112 17.2579 4 16.0235 4C13.6534 4 11.7317 5.92147 11.7317 8.29155C11.7317 8.6279 11.7697 8.95546 11.8429 9.2696C8.27609 9.0906 5.11375 7.38203 2.99709 4.78551C2.62765 5.41935 2.41601 6.15656 2.41601 6.94309C2.41601 8.43204 3.17364 9.74563 4.32523 10.5153C3.62179 10.4929 2.95996 10.2999 2.38139 9.97846C2.38098 9.99639 2.38098 10.0143 2.38098 10.0324C2.38098 12.1118 3.86033 13.8463 5.82359 14.2406C5.46349 14.3387 5.08434 14.3912 4.69294 14.3912C4.4164 14.3912 4.14755 14.3642 3.88546 14.3142C4.43161 16.0191 6.01653 17.26 7.89454 17.2945C6.42576 18.4457 4.57527 19.1318 2.56453 19.1318C2.21812 19.1318 1.87651 19.1114 1.54077 19.0717C3.44003 20.2894 5.69591 21 8.1195 21C16.0134 21 20.3302 14.4605 20.3302 8.78918C20.3302 8.60314 20.326 8.41805 20.3177 8.23395C21.1563 7.62886 21.8839 6.87302 22.4592 6.01238Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
                 <a href="#one" class="scroll__down flex items-center  gap-4 font-bold text-lg text-white">
                     scroll down
                     <svg class="scroll__down__svg rotate-90" width="16" height="24" viewBox="0 0 16 24" fill="none"
@@ -139,10 +163,11 @@
                         <path d="M16 16L14.59 14.59L9 20.17V0H7V20.17L1.42 14.58L0 16L8 24L16 16Z" fill="white" />
                     </svg>
                 </a>
+              
             </div>
             <div class="hero__right">
             </div>
-            <ul class="pagination_box fixed z-30 top-[326px] right-[80px] flex flex-col items-end">
+            <ul class="pagination_box max-lg:hidden fixed z-30 top-[326px] right-[80px] flex flex-col items-end">
                 <li class="pagination text-lg text-[white] border-r-[3px] border-[#D2D8D7] py-4 pr-8">
                     <a href="#Start" class="start">Start</a>
                 </li>
@@ -162,18 +187,19 @@
 
     <!-- get started start -->
     <section id="one" class="pb-[200px] get__startted">
-        <div class="max-w-[1502px] px-5 mx-auto w-full flex items-center justify-between gap-5 relative">
+        <div class="max-w-[1502px] px-5 mx-auto w-full flex max-lg:flex-col items-center justify-between gap-8 relative">
             <p
-                class="get_start__text_1 absolute left-0 z-[-1] top-[38px] font-bold text-[240px] text-[#273D3E] leading-[240px]">
+                class="get_start__text_1 absolute left-0 z-[-1] top-[38px] max-lg:top-[-128px] font-bold text-[150px] lg:text-[240px] text-[#273D3E] leading-[240px]">
                 01</p>
-            <div class="get_start_left  max-w-[632px] w-full pt-[141px] pb-[140px]">
+            <div class="get_start_left  max-w-[632px] w-full lg:pt-[141px] lg:pb-[140px]">
                 <div class="flex items-center gap-6 mb-[27px] get_start__text_2">
                     <span class="w-[72px] h-0.5 bg-[#FBD784]"></span>
-                    <h3 class="font-extrabold leading-5 text-lg text-[#FBD784]">GEt Started</h3>
+                    <h3 class="font-extrabold leading-5 text-base lg:text-lg text-[#FBD784]">GEt Started</h3>
                 </div>
-                <h4 class="get_start__text_2 font__chironic font-semibold text-[64px] leading-[76px] text-white mb-7">
+                <h4 class="get_start__text_2 font__chironic font-semibold text-[32px] lg:text-[64px] lg:leading-[76px] text-white  
+                mb-5  lg:mb-7">
                     What level of hiker are you?</h4>
-                <p class="get_start__text_2 font-bold text-lg text-white mb-7">Determining what level of hiker you are
+                <p class="get_start__text_2 font-medium lg:font-bold text-sm lg:text-lg text-white mb-5 lg:mb-7">Determining what level of hiker you are
                     can be an important tool when planning future hikes.
                     This hiking level guide will help you plan hikes according to different hike ratings set by various
                     websites like All Trails and Modern Hiker. What type of hiker are you – novice, moderate, advanced
@@ -187,7 +213,7 @@
                     </svg>
                 </a>
             </div>
-            <div class="get__startted__right  max-w-[566px] h-[720px] overflow-hidden w-full relative max-h-[720px]">
+            <div class="get__startted__right  max-w-[566px]  overflow-hidden w-full relative max-h-[720px]">
                 <img src="./img/get__startted/get_started.png" alt="" class=" w-full object-cover">
                 <div class="absolute w-full h-[120px] bg-white top-0"></div>
                 <div class="absolute w-full h-[120px] bg-white top-[120px]"></div>
@@ -202,20 +228,20 @@
 
     <!-- hiking start -->
     <section id="two" class="pb-[200px] hiking">
-        <div
-            class="max-w-[1502px] px-5 mx-auto w-full flex flex-row-reverse items-center justify-between gap-5 relative">
-            <p
-                class="hiking__text_1 absolute right-0 z-[-1] top-[38px] font-bold text-[240px] text-[#273D3E] leading-[240px]">
-                02</p>
-            <div class="hiking_start_left  max-w-[632px] w-full pt-[141px] pb-[140px]">
+        <div class="max-w-[1502px] px-5 mx-auto w-full flex max-lg:flex-col-reverse flex-row-reverse items-center justify-between gap-8 ">
+            <div class="relative hiking_start_left  max-w-[632px] w-full lg:pt-[141px] lg:pb-[140px]">
+                <p
+                    class="hiking__text_1 absolute right-0 z-[-1] lg:top-[38px] max-lg:top-0 font-bold text-[150px] lg:text-[240px] text-[#273D3E] leading-[100%] lg:leading-[240px]">
+                    02</p>
                 <div class="flex items-center gap-6 mb-[27px] hiking__text_2">
                     <span class="w-[72px] h-0.5 bg-[#FBD784]"></span>
-                    <h3 class="font-extrabold leading-5 text-lg text-[#FBD784]">Hiking Essentials</h3>
+                    <h3 class="font-extrabold leading-5 text-base lg:text-lg text-[#FBD784]">Hiking Essentials</h3>
                 </div>
-                <h4 class="hiking__text_2 font__chironic font-semibold text-[64px] leading-[76px] text-white mb-7">
+                <h4 class="hiking__text_2 font__chironic font-semibold text-[32px] lg:text-[64px] lg:leading-[76px] text-white  
+                mb-5  lg:mb-7">
                     Picking the right Hiking Gear!
                 </h4>
-                <p class="hiking__text_2 font-bold text-lg text-white mb-7">
+                <p class="hiking__text_2 font-medium lg:font-bold text-sm lg:text-lg text-white mb-5 lg:mb-7">
                     The nice thing about beginning hiking is that you don’t really need any special gear, you can
                     probably get away with things you already have.
                     Let’s start with clothing. A typical mistake hiking beginners make is wearing jeans and regular
@@ -230,7 +256,7 @@
                     </svg>
                 </a>
             </div>
-            <div class="hiking__right  max-w-[566px] h-[720px] overflow-hidden w-full relative max-h-[720px]">
+            <div class="hiking__right  max-w-[566px]  overflow-hidden w-full relative max-h-[720px]">
                 <img src="./img/get__startted/hiking.png" alt="" class=" w-full object-cover">
                 <div class="absolute w-full h-[120px] bg-white top-0"></div>
                 <div class="absolute w-full h-[120px] bg-white top-[120px]"></div>
@@ -245,17 +271,18 @@
 
     <!-- key start -->
     <section id="three" class="pb-[200px] key">
-        <div class="max-w-[1502px] px-5 mx-auto w-full flex  items-center justify-between gap-5 relative">
-            <p class="key__text_1 absolute left-0 z-[-1] top-[38px] font-bold text-[240px] text-[#273D3E] leading-[240px]">03</p>
-            <div class="key_start_left  max-w-[632px] w-full pt-[141px] pb-[140px]">
+        <div class="max-w-[1502px] px-5 mx-auto w-full flex max-lg:flex-col  items-center justify-between gap-8 relative">
+            <p class="key__text_1 absolute left-0 z-[-1] top-[38px] max-lg:top-[-120px] font-bold text-[150px] lg:text-[240px] text-[#273D3E] leading-[240px]">03</p>
+            <div class="key_start_left  max-w-[632px] w-full lg:pt-[141px] lg:pb-[140px]">
                 <div class="flex items-center gap-6 mb-[27px] key__text_2">
                     <span class="w-[72px] h-0.5 bg-[#FBD784]"></span>
-                    <h3 class="font-extrabold leading-5 text-lg text-[#FBD784]">where you go is the key</h3>
+                    <h3 class="font-extrabold leading-5 text-base lg:text-lg text-[#FBD784]">where you go is the key</h3>
                 </div>
-                <h4 class="key__text_2 font__chironic font-semibold text-[64px] leading-[76px] text-white mb-7">
+                <h4 class="key__text_2 font__chironic font-semibold text-[32px] lg:text-[64px] lg:leading-[76px] text-white  
+                mb-5  lg:mb-7">
                     Understand Your Map & Timing
                 </h4>
-                <p class="key__text_2 font-bold text-lg text-white mb-7">
+                <p class="key__text_2 font-medium lg:font-bold text-sm lg:text-lg text-white mb-5 lg:mb-7">
                     To start, print out the hiking guide and map. If it’s raining, throw them in a Zip-Lock bag. Read over the guide, study the map, and have a good idea of what to expect. I like to know what my next landmark is as I hike. For example, I’ll read the guide and know that say, in a mile, I make a right turn at the junction..
                 </p>
                 <a href="#" class="key__text_2 flex items-center gap-4 text-lg text-[#FBD784]">
@@ -267,7 +294,7 @@
                     </svg>
                 </a>
             </div>
-            <div class="key__right  max-w-[566px] h-[720px] overflow-hidden w-full relative max-h-[720px]">
+            <div class="key__right  max-w-[566px]  overflow-hidden w-full relative max-h-[720px]">
                 <img src="./img/get__startted/key.png" alt="" class=" w-full object-cover">
                 <div class="absolute w-full h-[120px] bg-white top-0"></div>
                 <div class="absolute w-full h-[120px] bg-white top-[120px]"></div>
