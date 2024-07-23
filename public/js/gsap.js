@@ -179,9 +179,9 @@ function hiking() {
         stagger:.3,
         scrollTrigger: {
             trigger:".hiking",
-            start:"300 top",
-            end:"1000 top",
-            markers:true,
+            start:"-150 top",
+            end:"150 top",
+            // markers:true,
             scrub:4,
             // pin:true
         }
@@ -412,4 +412,46 @@ one.forEach((item , index) => {
         pagination_box.classList.add("top-[250px]")
     })
 });
+
+let backgdrop_close = document.querySelector(".backgdrop_close")
+let hamburger = document.querySelector(".hamburger")
+let header__nav_menu = document.querySelector(".header__nav_menu")
+let close__btn = document.querySelector(".close__btn")
+let menu_tl = gsap.timeline()
+
+menu_tl.to(header__nav_menu , {
+    right:0,
+    dutration:.7
+})
+menu_tl.to(backgdrop_close , {
+    left:0,
+    dutration:.7
+})
+menu_tl.from(".nav__list_header_menu li" , {
+    y:150,
+    duration:.7,
+    stagger:0.28,
+    opacity:0
+})
+menu_tl.from(close__btn, {
+    opacity:0,
+    duration:.7
+})
+menu_tl.from(".header__nav__menu__accaunt", {
+    opacity:0,
+    duration:.7
+})
+
+menu_tl.pause()
+
+hamburger.addEventListener("click" , function(){
+    menu_tl.play()
+})
+
+close__btn.addEventListener("click" , function(){
+    menu_tl.reverse()
+})
+backgdrop_close.addEventListener("click" , function(){
+    menu_tl.reverse()
+})
 
